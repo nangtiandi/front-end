@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            background-color: #262626;
+        }
+        .container{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            width: 600px;
+            height: 400px;
+            background-color: rgba(0,0,0,0.2);
+        }
+        .card{
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            text-align: center;
+            padding: 40px;
+            color: #fff;
+        }
+        .card h2{
+            margin: 0;
+            padding: 0;
+            font-size: 30px;
+            letter-spacing: 1px;
+        }
+        .card p{
+            letter-spacing: 1px;
+        }
+        .contentBox{
+            width: 100%;
+            height: 100%;
+        }
+        .contentBox::before{
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 50%;
+            height: 100%;
+            background: url(images/IMG_20210828_155008.png);
+            transform-origin: bottom;
+            background-position: 600px;
+            transition: .5s;
+        }
+        .container:hover .contentBox::before{
+            transform: rotateX(90deg) translateY(50%);
+        }
+        .contentBox::after{
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 50%;
+            height: 100%;
+            background: url(images/IMG_20210828_155008.png);
+            transform-origin: top;
+            transition: .5s;
+            background-position: 300px;
+        }
+        .container:hover .contentBox::after{
+            transform: rotateX(90deg) translateY(-50%);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <h2>Hover Card Picture</h2>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Animi totam cupiditate asperiores quos. Impedit eum ea temporibus placeat vitae repellendus voluptatem doloribus hic, adipisci asperiores magni neque rem enim corporis.</p>            
+        </div>
+        <div class="contentBox"> </div>
+    </div>
+</body>
+</html>

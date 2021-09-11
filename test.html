@@ -1,0 +1,93 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/fontawesome-all.min.css">
+    <title>Light | dark mode</title>
+    <style>
+        img{
+            width: 300px;
+        }
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: azure;
+            min-height: 100vh;
+        }
+        .container .card{
+            width: 300px;
+            height: 380px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #fff;
+            box-shadow: 0 20px 25px rgba(168, 158, 158, 0.8);
+            border-radius: 5px;
+        }
+        .container .card .content,
+        .container .card .caption{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        .container .card .caption .imgBox{
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            overflow: hidden;
+        }
+        .container .card .caption .imgBox img{
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .container .card .caption h3{
+            color: darkturquoise;
+            text-align: center;
+            padding-top: 10px;
+            font-size: 1.3em;
+        }
+        .container .card .caption h3 span{
+            color: #777;
+            font-size: .75em;
+            font-weight: 800;
+        }
+        .container .card ul{
+            display: flex;
+            margin: 0 10px;
+        }
+        .container .card ul li{
+            list-style: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="content">
+                <div class="caption">
+                    <div class="imgBox">
+                        <img src="images/poe-square-4.jpg" alt="">
+                    </div>
+                    <h3>Nang Tian Ti <br><span>Web Developer</span></h3>
+                </div>
+                <ul>
+                    <li><a href=""><i class="fas fa-facebook"></i></a></li>
+                    <li><a href=""><i class="fas fa-twitter"></i></a></li>
+                    <li><a href=""><i class="fas fa-linkedin"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
